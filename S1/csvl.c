@@ -83,7 +83,7 @@ void affiche_tab_mots(char **ptab_mots) {
   char *s = ptab_mots[0];
   for (int i = 0; s != NULL; i++) {
     s = ptab_mots[i];
-    printf("%s", s);
+    printf("%s ", s);
   }
 }
 
@@ -97,7 +97,9 @@ int main() {
    * exercice 3, question 3, 5
    * exercice 4, question 1
    */
-  char *tab[] = {"mot1", "et", "mot2", NULL};
+  char **tab;
+  char *chaine = "mot1 et mot2";
+  tab = decompose_chaine(chaine);
   affiche_tab_mots(tab);
   return 1;
 }

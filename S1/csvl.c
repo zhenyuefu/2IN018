@@ -80,6 +80,10 @@ void detruit_tab_mots(char **ptab_mots) {
 }
 
 int compte_mots(char **ptab_mots) { /* a completer exercice 3, question 2 */
+  int n = 0;
+  while (ptab_mots[n++] != NULL)
+    ;
+  return n - 1;
 }
 
 void affiche_tab_mots(char **ptab_mots) {
@@ -101,9 +105,12 @@ int main() {
    * exercice 4, question 1
    */
   char **tab;
-  char *chaine = "mot1 et mot2";
+  char *chaine = "mot1 et mot2 et mot3";
   char *chaine_c;
+  int n;
   tab = decompose_chaine(chaine);
+  n = compte_mots(tab);
+  printf("%d", n);
   affiche_tab_mots(tab);
   printf("\n");
   chaine_c = compose_chaine(tab);

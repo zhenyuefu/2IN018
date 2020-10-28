@@ -38,6 +38,7 @@
 
 # files without extensions
 *
+!/**/
 !*.*
 
 # Debug files

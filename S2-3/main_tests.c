@@ -39,8 +39,10 @@ int main(void) {
   /*
   ** Test function enlever_animal()
   */
+  /* 测试删除第一个 */
   delete_predateur = liste_predateur;
   delete_proie = liste_proie;
+  /* 测试删除最后一个 */
   // for (i = 0; i < 20; i++) {
   //   delete_proie = delete_proie->suivant;
   //   delete_predateur = delete_predateur->suivant;

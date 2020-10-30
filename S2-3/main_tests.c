@@ -41,10 +41,10 @@ int main(void) {
   */
   delete_predateur = liste_predateur;
   delete_proie = liste_proie;
-  for (i = 0; i < 5; i++) {
-    delete_proie = delete_proie->suivant;
-    delete_predateur = delete_predateur->suivant;
-  }
+  // for (i = 0; i < 20; i++) {
+  //   delete_proie = delete_proie->suivant;
+  //   delete_predateur = delete_predateur->suivant;
+  // }
   enlever_animal(&liste_predateur, delete_predateur);
   enlever_animal(&liste_proie, delete_proie);
   afficher_ecosys(liste_predateur, liste_proie);

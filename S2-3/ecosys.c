@@ -38,7 +38,8 @@ void ajouter_animal(int x, int y, float energie, Animal **liste_animal) {
 /* A Faire. Part 1, exercice 5, question 5 */
 void enlever_animal(Animal **liste, Animal *animal) {
   Animal *current;
-  while ((current = *liste) != NULL && current->suivant != animal) {
+  while ((current = *liste) != NULL && current->suivant != animal &&
+         *liste != animal) {
     liste = &current->suivant;
   }
   *liste = current->suivant;

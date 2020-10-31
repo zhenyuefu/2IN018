@@ -22,15 +22,15 @@ int main(void) {
   srand((unsigned)time(&t));
 
   for (i = 0; i < NB_PROIES; i++) {
-    x = rand() % (SIZE_X - 1) + 1;
-    y = rand() % (SIZE_Y - 1) + 1;
+    x = rand() % SIZE_X;
+    y = rand() % SIZE_Y;
     energie = rand() % 10;
     ajouter_animal(x, y, energie, &liste_proie);
   }
 
   for (i = 0; i < NB_PREDATEURS; i++) {
-    x = rand() % (SIZE_X - 1) + 1;
-    y = rand() % (SIZE_Y - 1) + 1;
+    x = rand() % SIZE_X;
+    y = rand() % SIZE_Y;
     energie = rand() % 10;
     ajouter_animal(x, y, energie, &liste_predateur);
   }
@@ -43,7 +43,7 @@ int main(void) {
   delete_predateur = liste_predateur;
   delete_proie = liste_proie;
   /* 测试删除最后一个 */
-  // for (i = 0; i < 20; i++) {
+  // for (i = 0; i < 19; i++) {
   //   delete_proie = delete_proie->suivant;
   //   delete_predateur = delete_predateur->suivant;
   // }

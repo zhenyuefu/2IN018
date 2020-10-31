@@ -28,8 +28,8 @@ Animal *ajouter_en_tete_animal(Animal *liste, Animal *animal) {
 
 /* A faire. Part 1, exercice 5, question 1 */
 void ajouter_animal(int x, int y, float energie, Animal **liste_animal) {
-  assert(x < SIZE_X && x > 0);
-  assert(y < SIZE_Y && y > 0);
+  assert(x < SIZE_X && x >= 0);
+  assert(y < SIZE_Y && y >= 0);
   Animal *new = creer_animal(x, y, energie);
   new->suivant = *liste_animal;
   *liste_animal = new;

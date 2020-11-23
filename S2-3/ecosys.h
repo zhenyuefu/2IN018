@@ -10,6 +10,7 @@ extern int gain_energie_predateur;
 extern float p_reproduce_proie;
 extern float p_reproduce_predateur;
 extern int temps_repousse_herbe;
+extern float p_manger;
 
 typedef struct _animal {
   int x;

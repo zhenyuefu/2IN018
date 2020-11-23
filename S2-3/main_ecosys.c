@@ -12,14 +12,6 @@
 #define NB_PREDATEURS 20
 #define T_WAIT 40000
 
-/* Parametres globaux de l'ecosysteme (externes dans le ecosys.h)*/
-// float p_ch_dir=0.01;
-// int gain_energie_proie=6;
-// int gain_energie_predateur=20;
-// float p_reproduce_proie=0.4;
-// float p_reproduce_predateur=0.5;
-// int temps_repousse_herbe=-15;
-
 int main(void) {
   srand(time(NULL));
   int monde[SIZE_X][SIZE_Y] = {0};
@@ -53,22 +45,6 @@ int main(void) {
     // usleep(T_WAIT);
   }
 
-  // i = 0;
-  // int npo, npd;
-  // afficher_ecosys(liste_proie, liste_predateurs);
-  // while (i < 500 && (liste_proie != NULL)) {
-  //   rafraichir_proies(&liste_proie, monde);
-  //   rafraichir_predateurs(&liste_predateurs, &liste_proie);
-  //   reproduce(&liste_proie, p_reproduce_proie);
-  //   reproduce(&liste_predateurs, p_reproduce_predateur);
-  //   rafraichir_monde(monde);
-  //   usleep(T_WAIT);
-  //   i++;
-  //   npo = compte_animal_rec(liste_proie);
-  //   npd = compte_animal_rec(liste_predateurs);
-  //   afficher_ecosys(liste_proie, liste_predateurs);
-  //   printf("proies, predateurs: %d, %d\n", npo, npd);
-  // }
   fclose(f);
 
   liberer_liste_animaux(liste_proie);

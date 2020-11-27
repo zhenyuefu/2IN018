@@ -4,6 +4,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+float p_ch_dir = 0.01;
+int gain_energie_proie = 6;
+int gain_energie_predateur = 20;
+float p_reproduce_proie = 0.4;
+float p_reproduce_predateur = 0.5;
+int temps_repousse_herbe = -15;
+float p_manger = 0.6;
 /* PARTIE 1*/
 /* Fourni: Part 1, exercice 3, question 2 */
 Animal *creer_animal(int x, int y, float energie) {

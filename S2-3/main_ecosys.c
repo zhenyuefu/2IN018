@@ -12,14 +12,6 @@
 #define NB_PREDATEURS 20
 #define T_WAIT 40000
 
-float p_ch_dir = 0.01;
-int gain_energie_proie = 6;
-int gain_energie_predateur = 20;
-float p_reproduce_proie = 0.4;
-float p_reproduce_predateur = 0.5;
-int temps_repousse_herbe = -15;
-float p_manger = 0.6;
-
 int main(void) {
   srand(time(NULL));
   int monde[SIZE_X][SIZE_Y] = {0};

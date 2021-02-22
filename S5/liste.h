@@ -27,7 +27,8 @@ void inserer_debut(PListe pliste, void *data);
 // insere en fin de liste
 void inserer_fin(PListe pliste, void *data);
 
-// insere en place, par ordre strictement croissant (pas d'ajout si l'element est deja dans la liste)
+// insere en place, par ordre strictement croissant (pas d'ajout si l'element
+// est deja dans la liste)
 void inserer_place(PListe pliste, void *data);
 
 // chercher une donnee dans une liste. Renvoie NULL si non trouve
@@ -46,7 +47,7 @@ void afficher_liste(PListe pliste);
 int ecrire_liste(PListe pliste, const char *nom_fichier);
 
 // lire une liste depuis un fichier
-int lire_liste(PListe pliste, const char * nom_fichier);
+int lire_liste(PListe pliste, const char *nom_fichier);
 
 // creation d'une liste a partir d'un ensemble de donnees
 void ajouter_liste(PListe pliste, int nb_data, ...);
@@ -56,7 +57,5 @@ void map(PListe pliste, void (*fonction)(void *data, void *oa), void *optarg);
 
 // Extraction en tete
 PElement extraire_en_tete(PListe pl);
-
-
 
 #endif
